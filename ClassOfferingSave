@@ -1,0 +1,13 @@
+<?php
+	include('connection.php');
+	$id = $_POST['hiddenID'];
+	$coursename = $_POST['accro'];
+
+	$sql = "select * from course (coursename) values ('".$accro."')";
+
+	$res = $conn->query($sql);
+
+	if ($res){
+		header("location: courses.php");
+	}
+?>
